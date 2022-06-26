@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"go_db_fundamental/config"
 	"go_db_fundamental/model"
 	"go_db_fundamental/utils"
@@ -56,6 +57,8 @@ func main() {
 		}
 	}(db)
 
+	fmt.Println("Jalan")
+
 	//INSERT
 	//bikin insert jadi banyak, tinggal nambain [] dibelakang map
 
@@ -84,13 +87,13 @@ func main() {
 	// id := uuid.New()
 	//id = "C007" --> id.String()
 
-	customer := model.Customer{
-		Name:    "Unil Diubah",
-		Address: "Bandung",
-		Phone:   "078956767",
-		Email:   "diubah.unil@gmail.com",
-		Id:      "1711fb50-4fa0-4d8d-a923-dec7d10f1c40",
-	}
+	// customer := model.Customer{
+	// 	Name:    "Unil Diubah",
+	// 	Address: "Bandung",
+	// 	Phone:   "078956767",
+	// 	Email:   "diubah.unil@gmail.com",
+	// 	Id:      "1711fb50-4fa0-4d8d-a923-dec7d10f1c40",
+	// }
 
 	// id2 := uuid.New()
 
@@ -118,12 +121,12 @@ func main() {
 	//-> database.Preparex(query)
 	//-> stmt.MustExec(value)
 
-	stmt, err := db.Preparex(utils.UPDATE_CUSTOMER_PS)
-	if err != nil {
-		log.Println(err.Error())
-	} else {
-		log.Println("Update is Success")
-	}
+	// stmt, err := db.Preparex(utils.UPDATE_CUSTOMER_PS)
+	// if err != nil {
+	// 	log.Println(err.Error())
+	// } else {
+	// 	log.Println("Update is Success")
+	// }
 
 	// stmt.MustExec(customer_model.Id, customer_model.Name, customer_model.Address, customer_model.Phone, customer_model.Email, customer_model.Balance)
 
@@ -131,6 +134,33 @@ func main() {
 
 	//nambain update
 
-	stmt.MustExec(customer.Name, customer.Address, customer.Phone, customer.Email, customer.Id)
+	// stmt.MustExec(customer.Name, customer.Address, customer.Phone, customer.Email, customer.Id)
+
+	//nambain delete
+
+	customer01 := model.Customer{Id: "C006"}
+	// customer02 := model.Customer{Id: "C002"}
+
+	fmt.Println("Jalan2")
+
+	stmt, err := db.Preparex(utils.DELETE_CUSTOMER_PS_SD)
+
+	if err != nil {
+		log.Println(err.Error())
+	} else {
+		log.Println("Delete is Success")
+	}
+
+	fmt.Println("Jalan3")
+
+	stmt.MustExec(customer01.Id)
+
+	// DELETE
+	// customerId := "C004"
+	// err := cstUse.DeleteCustomer(customerId)
+	// if err != nil {
+	// 	fmt.Println("error test")
+	// 	fmt.Println(err.Error())
+	// }
 
 }
