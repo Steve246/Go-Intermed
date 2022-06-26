@@ -87,13 +87,13 @@ func main() {
 	// id := uuid.New()
 	//id = "C007" --> id.String()
 
-	// customer := model.Customer{
-	// 	Name:    "Unil Diubah",
-	// 	Address: "Bandung",
-	// 	Phone:   "078956767",
-	// 	Email:   "diubah.unil@gmail.com",
-	// 	Id:      "1711fb50-4fa0-4d8d-a923-dec7d10f1c40",
-	// }
+	customer_model := model.Customer{
+		Name:    "Lalala",
+		Address: "Bandung",
+		Phone:   "078956767",
+		Email:   "diubah.unil@gmail.com",
+		Id:      "C006",
+	}
 
 	// id2 := uuid.New()
 
@@ -128,7 +128,7 @@ func main() {
 	// 	log.Println("Update is Success")
 	// }
 
-	// stmt.MustExec(customer_model.Id, customer_model.Name, customer_model.Address, customer_model.Phone, customer_model.Email, customer_model.Balance)
+	// stmt.MustExec( customer_model.Name, customer_model.Address, customer_model.Phone, customer_model.Email, customer_model.Balance,customer_model.Id)
 
 	// stmt.MustExec(customer_model2.Id, customer_model2.Name, customer_model2.Address, customer_model2.Phone, customer_model2.Email, customer_model2.Balance)
 
