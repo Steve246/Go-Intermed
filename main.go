@@ -155,12 +155,4 @@ func main() {
 
 	stmt.MustExec(customer01.Id)
 
-	// DELETE
-	// customerId := "C004"
-	// err := cstUse.DeleteCustomer(customerId)
-	// if err != nil {
-	// 	fmt.Println("error test")
-	// 	fmt.Println(err.Error())
-	// }
-
 }
