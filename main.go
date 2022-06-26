@@ -87,13 +87,13 @@ func main() {
 	// id := uuid.New()
 	//id = "C007" --> id.String()
 
-	customer_model := model.Customer{
-		Name:    "Lalala",
-		Address: "Bandung",
-		Phone:   "078956767",
-		Email:   "diubah.unil@gmail.com",
-		Id:      "C006",
-	}
+	// customer := model.Customer{
+	// 	Name:    "Lalala",
+	// 	Address: "Bandung",
+	// 	Phone:   "078956767",
+	// 	Email:   "diubah.unil@gmail.com",
+	// 	Id:      "C006",
+	// }
 
 	// id2 := uuid.New()
 
