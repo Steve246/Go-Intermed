@@ -138,7 +138,7 @@ func main() {
 
 	//nambain delete
 
-	customer01 := model.Customer{Id: "C006"}
+	customer01 := model.Customer{Id: "C004"}
 	// customer02 := model.Customer{Id: "C002"}
 
 	fmt.Println("Jalan2")
